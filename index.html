@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <title>Bloxians</title>
+  <body>
+    <div style="font-family: Arial, sans-serif;" class="one">Bloxians</div>
+    <input style="font-family: Arial, sans-serif" placeholder="Search" type="username" id="searh" />
+  </body>
+  <style>
+  .one, .search {
+    box-sizing: border-box;
+    outline: 1px solid red;
+  }
+  body {
+  }
+  .one {
+    z-index: 1;
+    font-size: 117%;
+    height: 40%;
+    width: 100%;
+  }
+  #searh {
+    z-index: 2;
+    position: fixed;
+    top: 1%;
+    left: 20%;
+  }
+  </style>
+  <script>
+  let main = localStorage.getItem("username");
+  let gette = localStorage.getItem("passworda");
+  document.getElementById("searh").value = gette;
+  console.log(main);
+  document.getElementById("searh").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    let text = document.getElementById("searh").value;
+    localStorage.setItem("passworda", text);
+    let getten = localStorage.getItem("passworda");
+    console.log(getten);
+  }
+});
+  </script>
+</html>
