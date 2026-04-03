@@ -28,17 +28,14 @@
   }
   </style>
   <script>
-  let main = localStorage.getItem("username");
-  let gette = localStorage.getItem("passworda");
-  document.getElementById("searh").value = gette;
-  console.log(main);
+  let query = new URLSearchParams(window.location.search);
+  let valUea = query.get(texta);
+  document.getElementById("searh").value = valUea;
   document.getElementById("searh").addEventListener("keydown", function(e) {
-  if (e.key === "Enter") {
-    let text = document.getElementById("searh").value;
-    localStorage.setItem("passworda", text);
-    let getten = localStorage.getItem("passworda");
-    console.log(getten);
-  }
-});
+    if (e.key === "Enter") {
+      let text = document.getElementById("searh").value;
+      window.location.href = "https://main-bloxiansCOM.github.io/index.html?" + text;
+    };
+  });
   </script>
 </html>
