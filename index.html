@@ -29,7 +29,7 @@
   </style>
   <script>
   let query = new URLSearchParams(window.location.search);
-  let valUea = query.get(texta);
+  let valUea = query.get("texta");
   document.getElementById("searh").value = valUea;
   document.getElementById("searh").addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
